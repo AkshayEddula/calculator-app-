@@ -23,6 +23,10 @@ html {
     justify-content: space-between;
 }
 
+.header2{
+    color: black;
+}
+
 .themes {
     display: flex;
     width: 30%;
@@ -67,16 +71,24 @@ html {
     display: flex;
 }
 
-.theme-bar .c1 {
+
+.c{
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: hsl(223, 31%, 20%);
+}
+
+.c-active{
     cursor: pointer;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: hsl(6, 63%, 50%);
+} 
 
-}
-
-.theme-bar .c2 {
+/* .c2 {
     cursor: pointer;
     width: 16px;
     height: 16px;
@@ -84,13 +96,13 @@ html {
     background: hsl(223, 31%, 20%);
 }
 
-.theme-bar .c3 {
+.c3 {
     cursor: pointer;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: hsl(223, 31%, 20%);
-}
+} */
 
 /* result section */
 .result {

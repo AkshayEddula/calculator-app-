@@ -4,6 +4,8 @@ const result = document.getElementsByClassName('equal');
 const del = document.getElementById('delete');
 const reset = document.getElementsByClassName('reset-btn');
 
+
+
 let value_list = [];
 
 function btnFunction(e) {
