@@ -1,0 +1,247 @@
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+:root {
+  --primary-body-background: hsl(222, 26%, 31%);
+  --secondary-body-background: hsl(223, 31%, 20%);
+  --theme-color: white;
+  --theme-active: hsl(6, 63%, 50%);
+  --result-background: hsl(224, 36%, 15%);
+  --result-background-color: white;
+  --keys-background: hsl(30, 25%, 89%);
+  --keys-background-hover: hsl(0, 30%, 82%);
+  --keys-background-color: hsl(221, 14%, 31%);
+  --keys-background-shadow: hsl(28, 16%, 65%);
+  --del-background: hsl(225, 54%, 63%);
+  --del-shadow: hsl(224, 28%, 35%);
+  --del-color: white;
+  --equal-shadow: hsl(0, 43%, 34%);
+  --equal-color: white;
+}
+
+.theme-change1 {
+  --primary-body-background: hsl(0, 0%, 90%);
+  --secondary-body-background: hsl(0, 5%, 81%);
+  --theme-color: hsl(60, 10%, 19%);
+  --theme-active: hsl(25, 98%, 40%);
+  --result-background: hsl(0, 0%, 93%);
+  --keys-background-hover: hsl(0, 0%, 100%);
+  --result-background-color: hsl(60, 10%, 19%);
+  --keys-background: hsl(45, 7%, 89%);
+  --keys-background-color: hsl(60, 10%, 19%);
+  --keys-background-shadow: hsl(35, 11%, 61%);
+  --del-background: hsl(185, 42%, 37%);
+  --del-shadow: hsl(185, 58%, 25%);
+  --del-color: white;
+  --equal-shadow: hsl(25, 99%, 27%);
+  --equal-color: white;
+}
+
+.theme-change2 {
+  --primary-body-background: hsl(268, 75%, 9%);
+  --secondary-body-background: hsl(268, 71%, 12%);
+  --theme-color: hsl(52, 100%, 62%);
+  --theme-active: hsl(176, 100%, 44%);
+  --result-background: hsl(268, 71%, 12%);
+  --keys-background-hover: hsl(289, 58%, 49%);
+  --result-background-color: hsl(52, 100%, 62%);
+  --keys-background: hsl(268, 47%, 21%);
+  --keys-background-color: hsl(52, 100%, 62%);
+  --keys-background-shadow: hsl(290, 70%, 36%);
+  --del-background: hsl(281, 89%, 26%);
+  --del-shadow: hsl(285, 91%, 52%);
+  --del-color: white;
+  --equal-shadow: hsl(177, 92%, 70%);
+  --equal-color: hsl(198, 20%, 13%);
+}
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  background: var(--primary-body-background);
+}
+
+.container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+}
+
+.header {
+  color: var(--theme-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.themes {
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+}
+
+.themes h3 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding-top: 15px;
+  padding-right: 20px;
+}
+
+.theme-numbers {
+  display: flex;
+  flex-direction: column;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.numbers p {
+  margin: 0;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.theme-bar {
+  background: var(--secondary-body-background);
+  width: 90%;
+  height: 20px;
+  margin: 0;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  padding: 0px 3px;
+  display: flex;
+}
+
+.c {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--secondary-body-background);
+}
+
+.c-active {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--theme-active);
+}
+
+/* .c2 {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: hsl(223, 31%, 20%);
+}
+
+.c3 {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: hsl(223, 31%, 20%);
+} */
+
+/* result section */
+.result {
+  width: 100%;
+  height: 100px;
+  text-align: right;
+  padding-top: 10px;
+  font-size: 35px;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background: var(--result-background);
+}
+
+.result h1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  padding: 0px 20px;
+  line-height: 0;
+  color: var(--result-background-color);
+}
+
+/* keypad */
+
+.keys {
+  background: var(--secondary-body-background);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.grid {
+  min-width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 50px 50px 50px 50px;
+  column-gap: 20px;
+  row-gap: 15px;
+  text-align: center;
+}
+
+.grid button {
+  cursor: pointer;
+  background-color: var(--keys-background);
+  border-radius: 10px;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  font-size: 35px;
+  box-shadow: 2px 2px var(--keys-background-shadow);
+  color: var(--keys-background-color);
+  padding: 12px;
+}
+
+.grid button:hover {
+  background-color: var(--keys-background-hover);
+}
+
+#delete {
+  background-color: var(--del-background);
+  box-shadow: 2px 2px var(--del-shadow);
+  color: var(--del-color);
+  font-size: 25px;
+}
+
+.reset {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reset button {
+  cursor: pointer;
+  background-color: var(--del-background);
+  box-shadow: 2px 2px var(--del-shadow);
+  padding: 15px 77px;
+  border-radius: 10px;
+  border: none;
+  font-family: "League Spartan", sans-serif;
+  font-size: 25px;
+  color: var(--del-color);
+}
+
+.reset .equal {
+  background-color: var(--theme-active);
+  box-shadow: 2px 2px var(--equal-shadow);
+  padding: 10px 102px;
+  color: var(--equal-color);
+}
